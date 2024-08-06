@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Default to horizontal layout */
+    gap: 20px;
+}
+
+.main, .results {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.main h1 {
+    margin-bottom: 20px;
+}
+
+.main input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.main button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+.main button:hover {
+    background-color: #0056b3;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 5px; /* Reduced space from buttons */
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.results {
+    border-left: 1px solid #ddd;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    visibility: hidden;
+}
+
+.results.show {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.steps {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #666;
+    text-align: left;
+}
+
+.result {
+    margin-top: 15px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.result img {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; /* Stack vertically on mobile */
+    }
+
+    .main button {
+        margin-top: 3px; /* Space between buttons */
+        width: calc(100% - 22px); /* Full width of the container minus padding */
+        margin-bottom: 10px; /* Space between buttons */
+    }
+
+    .paste-url-button {
+        display: inline-block;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .paste-url-button {
+        display: none;
+    }
+
+    .main button {
+        width: 100%; /* Full width of the container */
+        margin-top: 13px; /* Space between buttons */
+        margin-bottom: 20px; /* Space between buttons */
+    }
+
+    .progress-bar {
+        margin-top: 5px; /* Reduced space from buttons */
+    }
+}
+
