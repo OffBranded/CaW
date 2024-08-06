@@ -4,13 +4,13 @@
   <img src="https://raw.githubusercontent.com/OffBranded/CaW/main/icon.ico" alt="Check-a-Web! icon"/>
 </p>
 
-**Check-a-Web!** is a simple web application designed to check the status of websites. It validates URLs, checks if the site is reachable, and provides the website's favicon and response time.
+**Check-a-Web!** is a simple web application designed to check the status of websites. It validates URLs, checks if the site is reachable, and provides the website's icon (if possible) and response time.
 
 ## Features
 
 - **URL Validation**: Checks if the entered URL is in a valid format.
 - **Website Status Check**: Attempts to fetch the website to verify if it's up or down.
-- **Favicon Retrieval**: Displays the website's favicon if available.
+- **Icon Retrieval**: Displays the website's Icon if available/possible.
 - **Response Time**: Measures and displays the response time of the website.
 - **Responsive Design**: Adapts the layout for both mobile and desktop devices.
 
@@ -22,5 +22,5 @@
    - Validate the URL format.
    - Attempt to access the website.
    - Show the website's status (UP or DOWN).
-   - Display the response time and favicon.
+   - Display the response time and icon (if possible).
    - Provide a clickable link to the website.
