@@ -24,3 +24,6 @@
    - Show the website's status (UP or DOWN).
    - Display the response time and icon (if possible).
    - Provide a clickable link to the website.
+
+> [!WARNING]
+> This is a basic version and some pages will display wrong detections
